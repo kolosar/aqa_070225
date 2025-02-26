@@ -30,10 +30,18 @@ new_dictionary = {value: key for key, value in base_dict.items()}
 print("New swapped disctionary: ", new_dictionary)
 # task 6. Об'єднайте два словника base_dict та add_dict  в новий словник sum_dict
 # Якщо ключі збігаються, то перетворіть значення в строку та об'єднайте їх
+print("task 6**********")
+sum_dict = {}
+for key, value in base_dict.items():
+    sum_dict[key] = value
+for key, value in add_dict.items():
+    if key in sum_dict:
+        sum_dict[key] = str(sum_dict[key]) + ", " + str(value)
+    else:
+        sum_dict[key] = value
+print("Combined base_dict and add_dict: ", sum_dict)
 
-#sum_dict = {key: (base_dict.get(key, "") + (" " if key in base_dict and key in add_dict else "") + add_dict.get(key, "")).strip()
-#            for key in set(base_dict) | set(add_dict)}
-#print("Merged  base_dict та add_dict: ", sum_dict)
+
 # task 7.
 print("task 7**********")
 line = "Створіть множину всіх символів, які входять у заданий рядок"
@@ -63,7 +71,37 @@ person_list = [('Alice', 25), ('Boby', 19), ('Charlie', 32),
 # а значення - списки імен людей, які потрапляють в кожен діапазон.
 # Приклад виводу:
 # {'10-19': ['A'], '20-29': ['B', 'C', 'D'], '30-39': ['E'], '40-49': ['F']}
-##person_list_dic = dict(person_list)
-#for name, age in person_list_dic:
+"""person_list_dic = dict(person_list)
+print(person_list_dic)
+person_age_range = {}
+for name, age in person_list_dic.items():
+    if  10 <= age <= 19:
+        age_range = "10-19"
+    elif 20 <= age <= 29:
+        age_range = "20-29"
+    elif 30 <= age <= 39:
+        age_range = "30-39"
+    elif 40 <= age <= 49:
+        age_range = "20-29"
+    else: 
+        person_age_range[age_range] = name 
+print(person_age_range)
+"""
+age_ranges = {}
+for name, age in person_list:
+    if 10 <= age <= 19:
+        age_range = '10-19'
+    elif 20 <= age <= 29:
+        age_range = '20-29'
+    elif 30 <= age <= 39:
+        age_range = '30-39'
+    elif 40 <= age <= 49:
+        age_range = '40-49'
+    else:
+        continue  
+    if age_range not in age_ranges:
+        age_ranges[age_range] = [] 
+    age_ranges[age_range].append(name)
+print("task 10. The available age ranges:",age_ranges)
 
-#print(person_list_dic)
+
