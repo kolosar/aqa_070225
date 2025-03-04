@@ -90,7 +90,7 @@ def sum_dict(base_dict, add_dict):
         sum_dict[key] = value
     for key, value in add_dict.items():
         if key in sum_dict:
-         sum_dict[key] = str(sum_dict[key]) + ", " + str(value)
+            sum_dict[key] = str(sum_dict[key]) + ", " + str(value)
         else:
             sum_dict[key] = value
     print("Combined base_dict and add_dict: ", sum_dict)
