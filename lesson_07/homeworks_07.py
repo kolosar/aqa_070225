@@ -63,7 +63,7 @@ print("Task 5 - the longest word in the list: ", longest_words(list_of_words))
 не є підрядком першого рядка."""
 print("task - 6 *********")
 def find_substring(str1, str2):
-   return str1.find(str2)
+     return str1.find(str2)
     #return -1
 
 str1 = "Hello, world!"
