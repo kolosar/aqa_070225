@@ -39,8 +39,9 @@ print("Task 3 - returned sum of a + b = ", summa(2,3))
 """  Написати функцію, яка розрахує середнє арифметичне списку чисел.
 """
 numbers = [1, 2, 3]
-def arithmetic_mean (a):
-    return sum(a) / len(a)
+def arithmetic_mean(array:list):
+    """ Doc string """
+    return sum(array) / len(array)
 print("Task 4 - ", arithmetic_mean(numbers))
 # task 4
 """  Написати функцію, яка приймає рядок та повертає його у зворотному порядку.
