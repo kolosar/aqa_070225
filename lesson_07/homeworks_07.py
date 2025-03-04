@@ -31,8 +31,8 @@ multiplication_table(3)
 # task 2
 """  Написати функцію, яка обчислює суму двох чисел.
 """
-def summa (a,b):
-    return a+b
+def summa(a, b):
+    return a + b
 print("Task 3 - returned sum of a + b = ", summa(2,3))
 
 # task 3
