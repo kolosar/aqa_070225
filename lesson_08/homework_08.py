@@ -18,9 +18,14 @@ sum_numbers_in_list("21")  # ValueError
 def sum_numbers_in_list(string_list: list):
     """Повертає список сум чисел зі списку строк,
     які складаються з чисел, розділених комою."""
-
+    result = []
+    for item in string_list:
+        try:
+            pass
+        except ValueError as e:
+            result.append("Не можу це зробити!")
     
-    return
+    return result
 
 
 if __name__ == "__main__":
