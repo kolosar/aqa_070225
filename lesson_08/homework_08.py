@@ -25,8 +25,15 @@ def sum_numbers_in_list(string_list: list):
             numbers = list(map(int, line.split(',')))
             # Додаємо сумми елементів в список
             result.append(sum(numbers))
-        except (ValueError, AttributeError, AssertionError):
+        except (ValueError):
+            print(f"Не можу це зробити!")
             result.append(f"Error: Invalid data in '{line}'")
+        except (AttributeError):
+            print(f"Не можу це зробити! AttributeError")
+            result.append(f"AttributeError: Invalid data in '{line}'")
+        except (AssertionError):
+            result.append(f"EAssertionError: The condition is False! in '{line}'")
+            
 
     
     return result
