@@ -171,3 +171,9 @@ cython_debug/
 .pypirc
 
 .DS_Store
+
+#lesson_13 homework
+lesson_13/work_with_json
+r-m-c.csv
+random-michaels.csv
+groups.xml
