@@ -23,19 +23,21 @@ class Rhombus():
         if name == "side_a":
             if value <= 0:
                 raise ValueError("Неправильно заданa side_a, сторона а має бути > 0 ")
-        super().__setattr__("angle_a", value)
-        if name == "angle_a":
+            super().__setattr__(name, value)
+            
+        elif name == "angle_a":
             if not (0 < value < 180):
                 raise ValueError("Кут повинен бути в межах від 0 до 180") 
-        super().__setattr__("angle_b", 180 - value)
-        return
-    
-        super().__setattr__(name, value)
-    
+            super().__setattr__(name, value)
+            super().__setattr__("angle_b", 180 - value)
+        
+        else:
+            super().__setattr__(name, value)
+  
     def __str__(self):
         return f"Ромб: сторона = {self.side_a}, кут А = {self.angle_a}, кут Б = {self.angle_b}"
 
-if __name__ == "__main":
+if __name__ == "__main__":
     romb = Rhombus(10, 60)
     print(romb)
 
