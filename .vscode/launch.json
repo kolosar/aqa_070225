@@ -8,7 +8,11 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "module": "pytest",
-            "args": ["-v", "${file}"],
+            "args": [
+                "-v", 
+                "${file}",
+                "-k test_example"
+               ],
             "purpose": ["debug-test"]
         },
         {
