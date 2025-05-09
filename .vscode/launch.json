@@ -9,9 +9,9 @@
             "justMyCode": true,
             "module": "pytest",
             "args": [
-                "-v", 
+                "-v", "-s",
                 "${file}",
-                "-k test_example"
+                // "-k test_example"
                ],
             "purpose": ["debug-test"]
         },
