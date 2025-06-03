@@ -8,7 +8,7 @@ URL = "https://guest:welcome2qauto@qauto.forstudy.space"
 
 @pytest.fixture(scope="module")
 def driver():
-    _driver = firefox(True)
+    _driver = firefox()
     _driver.get(URL)
     yield _driver
     _driver.quit()
