@@ -1,0 +1,2 @@
+Jenkins
+docker-compose -f Docker_compose2.yaml up -d
