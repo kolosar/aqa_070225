@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh '''
                 . venv/bin/activate
-                pytest -s -v --junitxml=$WORKSPACE/report.xml
+                pytest -s -v "$WORKSPACE/lesson_24/test_lesson_24.py" --junitxml=$WORKSPACE/report.xml
                 '''
                 junit '**/report.xml'
             }
